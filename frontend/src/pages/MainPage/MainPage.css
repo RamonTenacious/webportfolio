@@ -1,0 +1,10 @@
+.mainPage {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/images/background/background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #121212;
+    padding-inline: var(--padding-inline);
+    padding-block: var(--padding-block);
+}

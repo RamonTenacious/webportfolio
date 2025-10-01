@@ -1,0 +1,30 @@
+.navbar__ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 160px;
+}
+
+.navbar__a-selected, .navbar__a-unselected {
+    font-size: var(--navbar-font-size);
+}
+
+.navbar__a-unselected {
+    color: var(--unselected-text-color);
+}
+
+.navbar__dot {
+    display: inline-block;      
+    width: 8px;                 
+    height: 8px;                
+    background-color: white;
+    border-radius: 50%;         
+    margin-left: 4px;
+    vertical-align: middle;     
+}
+
+.navbar__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

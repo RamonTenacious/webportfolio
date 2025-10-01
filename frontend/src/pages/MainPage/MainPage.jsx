@@ -1,13 +1,13 @@
-import { Experiences, Footer, LandingPage, Projects, Skills } from '../../components';
+import { Navbar, LandingPage, Expertises, PortalGallery, Footer } from '../../components';
 import './MainPage.css';
 
 export const MainPage = () => {
     return (
-        <section>
+        <section className='mainPage'>
+            <Navbar />
             <LandingPage />
-            <Skills />
-            <Projects />
-            <Experiences />
+            <Expertises />
+            <PortalGallery />
             <Footer />
         </section>
     )

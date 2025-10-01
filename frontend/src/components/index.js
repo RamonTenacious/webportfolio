@@ -1,5 +1,5 @@
-export { Skills } from './MainPage/Skills/Skills';
-export { Projects } from './MainPage/Projects/Projects';
+export { Navbar } from './MainPage/Navbar/Navbar';
 export { LandingPage } from './MainPage/LandingPage/LandingPage';
+export { Expertises } from './MainPage/Expertises/Expertises';
+export { PortalGallery } from './MainPage/PortalGallery/PortalGallery';
 export { Footer } from './MainPage/Footer/Footer';
-export { Experiences } from './MainPage/Experiences/Experiences'; 
