@@ -1,54 +1,23 @@
 import { useEffect, useState } from 'react'
 import './Navbar.css'
 import { useScrolledDown } from '../../../hooks/useScrolledDown';
+import { useMostVisibleComponent } from '../../../hooks/useMostVisibleComponent';
 
 export const Navbar = () => {
+    const options = [
+        { name: "Home", target: "landingPage" },
+        { name: "Expertises", target: "expertises" },
+        { name: "Portal Gallery", target: "portalGallery" }
+    ];
 
     const scrolledDown = useScrolledDown(50);
+    const [sections, setSections] = useState([]);
     
-    const options = [
-        {
-            name: "Home",
-            target: "landingPage"
-        },
-        {
-            name: "Expertises",
-            target: "expertises"
-        },
-        {
-            name: "Portal Gallery",
-            target: "portalGallery"
-        }
-    ]
-
-    const [activeSection, setActiveSection] = useState("");
-
     useEffect(() => {
-        const sections = document.querySelectorAll("section[id]")
+        setSections(Array.from(document.querySelectorAll("section[id]")));
+    }, [])
 
-        const filteredSections = Array.from(sections).filter(section => 
-            options.some(opt => opt.target === section.id)
-        );
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visibileEntry = entries
-                    .filter(entry => entry.isIntersecting)
-                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-                if (visibileEntry) {
-                    setActiveSection(visibileEntry.target.id);
-                }
-            },
-            {
-                threshold: Array.from({ length: 101}, (_, i) => i / 100)
-            }
-        )
-
-        filteredSections.forEach((section) => observer.observe(section));
-
-        return () => observer.disconnect();
-    }, []);
+    const activeSection = useMostVisibleComponent(sections, options);
 
     return (
         <section className={scrolledDown ? 'navbar navbar-scrolled' : 'navbar'} id='navbar'>
