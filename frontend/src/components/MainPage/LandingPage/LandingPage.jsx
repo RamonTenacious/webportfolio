@@ -21,12 +21,6 @@ export const LandingPage = () => {
                     </span>
                 </div>
             </figure>
-            <figure className='landingPage__skullFigure'>
-                <img className='landingPage__skullImage' 
-                    src={skullImg}
-                    alt='Skull Image'
-                />
-            </figure>
         </section>
     )
 }
