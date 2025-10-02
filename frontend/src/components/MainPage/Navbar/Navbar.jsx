@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
 import './Navbar.css'
+import { useScrolledDown } from '../../../hooks/useScrolledDown';
 
 export const Navbar = () => {
+
+    const scrolledDown = useScrolledDown(50);
     
     const options = [
         {
@@ -45,10 +48,10 @@ export const Navbar = () => {
         filteredSections.forEach((section) => observer.observe(section));
 
         return () => observer.disconnect();
-    }, [])
+    }, []);
 
     return (
-        <section className='navbar' id='navbar'>
+        <section className={scrolledDown ? 'navbar navbar-scrolled' : 'navbar'} id='navbar'>
             <nav>
                 <ul className='navbar__ul'>
                     {
