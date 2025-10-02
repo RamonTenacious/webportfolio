@@ -1,7 +1,16 @@
+.navbar {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: var(--navbar-padding-right);
+    z-index: 2;
+}
+
 .navbar__ul {
     display: flex;
     justify-content: flex-end;
-    gap: 160px;
+    gap: var(--navbar-gap);
 }
 
 .navbar__a-selected, .navbar__a-unselected {
@@ -27,4 +36,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
 }

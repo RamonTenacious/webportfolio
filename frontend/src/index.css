@@ -10,13 +10,20 @@
     --main-background-color: #121212;
     --primary-color: #BBAB89;
     --text-color: #FFF;
+    --gradient-white-gold-color: linear-gradient(180deg,rgba(255, 255, 255, 1) 49%, rgba(191, 180, 155, 1) 100%);
     --unselected-text-color: rgba(255, 255, 255, 0.6);
+
     --padding-inline: 72px;
     --padding-block: 86px;
+    --navbar-padding-right: 157px;
+    --navbar-gap: clamp(2rem, 10vw, 160px);
+
     --decorative-text: "Cinzel Decorative", sans-serif;
     --body-text: "Cormorant Garamond", serif;
 
-    --navbar-font-size: 24px
+    --navbar-font-size: 24px;
+    --h1-font-size: 192px;
+    --h3-font-size: 48px;
 }
 
 html, body {

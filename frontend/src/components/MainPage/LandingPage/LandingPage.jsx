@@ -1,9 +1,32 @@
 import './LandingPage.css';
+import titleImg from '../../../assets/images/background/Text.png';
+import skullImg from '../../../assets/images/background/SkullImage.png';
+import mouseIcon from '../../../assets/images/icons/mouseIcon.png';
 
 export const LandingPage = () => {
     return (
-        <section id='landingPage'>
-            <h1>LandingPage</h1>
+        <section id='landingPage' className='landingPage'>
+            <figure className='landingPage__titleFigure'>
+                <div className='landingPage__titleWrapper'>
+                    <img className='landingPage__titleImg'
+                        src={titleImg}
+                        alt='Tenacious Software Engineer'
+                    />
+                    <span className='landingPage__mouseWrapper'>
+                        <img className='landingPage__mouseIcon'
+                            src={mouseIcon}
+                            alt='Mouse Icon' 
+
+                        />
+                    </span>
+                </div>
+            </figure>
+            <figure className='landingPage__skullFigure'>
+                <img className='landingPage__skullImage' 
+                    src={skullImg}
+                    alt='Skull Image'
+                />
+            </figure>
         </section>
     )
 }
