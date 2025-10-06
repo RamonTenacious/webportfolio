@@ -1,5 +1,5 @@
 import './LandingPage.css';
-import titleImg from '../../../assets/images/background/Text.png';
+import titleImg from '../../../assets/images/background/Title.png';
 import skullImg from '../../../assets/images/background/SkullImage.png';
 import mouseIcon from '../../../assets/images/icons/mouseIcon.png';
 
