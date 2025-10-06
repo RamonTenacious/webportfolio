@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
-export const useScrolledDown = (threshold = 50) => {
+export const useScrolledDown = (threshold = 200) => {
     const [scrolled, setScrolled] = useState(false);
 
+    console.log(window.scrollY)
     useEffect(() => {
         let ticking = false;
 

@@ -1,6 +1,5 @@
 .landingPage {
     position: relative;
-    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     padding-top: 182px;
@@ -16,12 +15,12 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
+    padding-left: var(--padding-inline);
 }
 
 .landingPage__titleImg {
     aspect-ratio: auto;
-    min-width: 280px;
-    width: 59.21vw;
+    width: clamp(280px, 59.21vw, 1200px);
     user-select: none;
     z-index: 1;
 }
@@ -33,36 +32,27 @@
     justify-content: center;
 }
 
-.landingPage__skullFigure {
-    width: 100%;
-    height: fit-content;       
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    pointer-events: none;
-    overflow: hidden;    
-    z-index: 0;          
-}
-
-.landingPage__skullImage {
+.landingPage__skullImg {
     width: 50vw;
     aspect-ratio: auto;
     max-width: 1024px;
-    position: relative;
-    top: -10vw;
+    position: absolute;
+    top: -25vh;
+    right: 0px;
 }
 
 @media screen and (max-width: 1024px) {
-    .landingPage__skullFigure {
-        height: 100vh;
-        justify-content: center;
+    .landingPage__skullImg {
+        top: -15%;
+        left: 25%;
     }
 
     .landingPage__titleFigure {
         justify-content: center;
         align-items: center;
+    }
+
+    .landingPage__titleWrapper {
+        padding: 0;
     }
 }

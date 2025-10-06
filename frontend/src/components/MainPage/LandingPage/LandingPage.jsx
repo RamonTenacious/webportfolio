@@ -16,9 +16,12 @@ export const LandingPage = () => {
                         <img className='landingPage__mouseIcon'
                             src={mouseIcon}
                             alt='Mouse Icon' 
-
                         />
                     </span>
+                    <img className='landingPage__skullImg'
+                        src={skullImg}
+                        alt='Skull Image'
+                    />
                 </div>
             </figure>
         </section>

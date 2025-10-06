@@ -5,7 +5,7 @@ import { useMostVisibleComponent } from '../../../hooks/useMostVisibleComponent'
 import { NAVBAR_OPTIONS } from '../../../constants/navbarOptions';
 
 export const Navbar = () => {
-    const scrolledDown = useScrolledDown(50);
+    const scrolledDown = useScrolledDown(200);
     const [sections, setSections] = useState([]);
     
     useEffect(() => {
