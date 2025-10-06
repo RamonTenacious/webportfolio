@@ -22,7 +22,7 @@
     gap: var(--navbar-gap);
 }
 
-.navbar__a-selected, .navbar__a-unselected {
+.navbar__a, .navbar__a-selected, .navbar__a-unselected {
     font-size: var(--navbar-font-size);
 }
 

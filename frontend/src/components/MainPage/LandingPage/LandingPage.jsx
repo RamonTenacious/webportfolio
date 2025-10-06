@@ -9,8 +9,6 @@ import { deviceContext } from '../../../context/DeviceContext';
 export const LandingPage = () => {
     const deviceProps = useContext(deviceContext)
 
-    console.log(deviceProps.isMobile)
-
     return (
         <section id='landingPage' className='landingPage'>
             <figure className='landingPage__titleFigure'>

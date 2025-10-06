@@ -1,20 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './Navbar.css'
 import { useScrolledDown } from '../../../hooks/useScrolledDown';
 import { useMostVisibleComponent } from '../../../hooks/useMostVisibleComponent';
 import { NAVBAR_OPTIONS } from '../../../constants/navbarOptions';
+import { deviceContext } from '../../../context/DeviceContext';
+import { NavbarMobile } from './NavbarMobile/NavbarMobile';
 
 export const Navbar = () => {
     const scrolledDown = useScrolledDown(200);
+    const deviceProps = useContext(deviceContext);
     const [sections, setSections] = useState([]);
-    
+
     useEffect(() => {
         setSections(Array.from(document.querySelectorAll("section[id]")));
-    }, [])
+    }, []);
 
     const activeSection = useMostVisibleComponent(sections, NAVBAR_OPTIONS);
 
-    return (
+    return deviceProps.isMobile ? (
+        <NavbarMobile />
+        ) : (
         <section className={scrolledDown ? 'navbar navbar-scrolled' : 'navbar'} id='navbar'>
             <nav>
                 <ul className='navbar__ul'>
@@ -33,5 +38,5 @@ export const Navbar = () => {
                 </ul>
             </nav>
         </section>
-    )
+        )
 }
