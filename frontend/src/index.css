@@ -16,15 +16,17 @@
 
     --padding-inline: 72px;
     --padding-block: 86px;
-    --navbar-padding-right: 157px;
-    --navbar-gap: clamp(2rem, 10vw, 160px);
 
     --decorative-text: "Cinzel Decorative", sans-serif;
     --body-text: "Cormorant Garamond", serif;
+    --font-spacing: 10%;
 
-    --navbar-font-size: 24px;
     --h1-font-size: 192px;
     --h3-font-size: 48px;
+
+    --navbar-padding-right: 157px;
+    --navbar-gap: clamp(2rem, 10vw, 160px);
+    --navbar-font-size: 24px;
 }
 
 html, body {
@@ -35,6 +37,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
     color: var(--text-color);
@@ -42,4 +48,23 @@ a {
 
 ul {
     list-style: none;
+}
+
+h2 {
+    font-size: 96px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 24px;
 }

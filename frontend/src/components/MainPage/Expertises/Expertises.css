@@ -1,0 +1,44 @@
+.expertises {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: 181px;
+  width: 100vw;
+  padding: 41px 0 98px 75px;
+  border: 1px solid white;
+  border-right-style: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.expertises__header {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+
+.expertises__title {
+    letter-spacing: 10px;
+    color: var(--primary-color);
+}
+
+.expertises__subtitle {
+    color: var(--unselected-text-color);
+    font-style: italic;
+    letter-spacing: 8px;
+    padding-top: 16px;
+}
+
+.expertises__contentWrapper {
+    display: flex;
+    gap: 368px;
+}
+
+.expertises__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
