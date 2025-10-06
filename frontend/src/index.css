@@ -19,7 +19,7 @@
 
     --decorative-text: "Cinzel Decorative", sans-serif;
     --body-text: "Cormorant Garamond", serif;
-    --font-spacing: 10%;
+    --font-spacing: 10px;
 
     --h1-font-size: 192px;
     --h3-font-size: 48px;
@@ -67,4 +67,10 @@ h6 {
 
 p {
     font-size: clamp(14px, 2vw, 24px);
+}
+
+@media screen and (max-width: 380px) {
+    :root {
+        --font-spacing: 0px;
+    }
 }

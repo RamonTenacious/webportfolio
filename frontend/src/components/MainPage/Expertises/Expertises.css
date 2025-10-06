@@ -35,7 +35,7 @@
 
 .expertises__title {
   color: var(--primary-color);
-  letter-spacing: 10px;
+  letter-spacing: var(--font-spacing)
 }
 
 .expertises__subtitle {
