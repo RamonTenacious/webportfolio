@@ -1,16 +1,12 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Navbar.css'
 import { useScrolledDown } from '../../../hooks/useScrolledDown';
 import { useMostVisibleComponent } from '../../../hooks/useMostVisibleComponent';
 import { NAVBAR_OPTIONS } from '../../../constants/navbarOptions';
-import { deviceContext } from '../../../context/DeviceContext';
 
 export const Navbar = () => {
     const scrolledDown = useScrolledDown(200);
     const [sections, setSections] = useState([]);
-
-    const test = useContext(deviceContext);
-    console.log(test)
     
     useEffect(() => {
         setSections(Array.from(document.querySelectorAll("section[id]")));
