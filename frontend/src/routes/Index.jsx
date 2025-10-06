@@ -1,5 +1,5 @@
 import { deviceContext } from '../context/DeviceContext';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { publicRoutes } from './AllRoutes';
 import { Route, Routes } from 'react-router-dom';
 import { useIsMobile } from '../hooks/useIsMobile';
