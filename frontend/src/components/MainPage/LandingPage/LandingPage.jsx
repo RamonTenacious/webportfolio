@@ -17,12 +17,14 @@ export const LandingPage = () => {
                         src={deviceProps.isMobile ? titleMobileImg : titleImg}
                         alt='Tenacious Software Engineer'
                     />
+                    {/*
                     <span className='landingPage__mouseWrapper'>
                         <img className='landingPage__mouseIcon'
                             src={mouseIcon}
                             alt='Mouse Icon' 
                         />
                     </span>
+                    */}
                     <img className='landingPage__skullImg'
                         src={skullImg}
                         alt='Skull Image'

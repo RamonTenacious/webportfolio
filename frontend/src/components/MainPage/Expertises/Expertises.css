@@ -1,44 +1,93 @@
 .expertises {
   position: relative;
-  box-sizing: border-box;
-  margin-left: 181px;
-  width: 100vw;
-  padding: 41px 0 98px 75px;
-  border: 1px solid white;
-  border-right-style: none;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 80px;
+  box-sizing: border-box;
+  margin-left: 181px;
+  width: 120vw;
+  padding: 41px 0 98px 75px;
+  border: 1px solid white;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.expertises__inner {
+  max-width: calc(100% - 181px);
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: inherit;
+}
+
+.expertises__header,
+.expertises__contentWrapper {
+  display: flex;
+  align-items: center;
 }
 
 .expertises__header {
-    display: flex;
-    align-items: center;
-    gap: 52px;
+  gap: 52px;
 }
 
 .expertises__title {
-    letter-spacing: 10px;
-    color: var(--primary-color);
+  color: var(--primary-color);
+  letter-spacing: 10px;
 }
 
 .expertises__subtitle {
-    color: var(--unselected-text-color);
-    font-style: italic;
-    letter-spacing: 8px;
-    padding-top: 16px;
+  color: var(--unselected-text-color);
+  font-style: italic;
+  letter-spacing: 8px;
+  padding-top: 16px;
 }
 
 .expertises__contentWrapper {
-    display: flex;
-    gap: 368px;
+  gap: clamp(24px, 15%, 368px);
 }
 
 .expertises__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .expertises {
+    all: unset; /* cleanses all inherited styles from above */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+    position: relative;
+    padding: 2rem;
+  }
+
+  .expertises__inner {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .expertises__header,
+  .expertises__contentWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
 }
