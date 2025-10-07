@@ -21,7 +21,7 @@ export const Expertises = () => {
             <div className='expertises__inner'>
                 <header className='expertises__header'>
                     <h2 className='expertises__title'>Expertises</h2>
-                    <h6 className='expertises__subtitle'>Started my journey at 16 years old...</h6>
+                    <h5 className='expertises__subtitle'>Started my journey at 16 years old...</h5>
                 </header>
                 <div className='expertises__contentWrapper'>
                 {
