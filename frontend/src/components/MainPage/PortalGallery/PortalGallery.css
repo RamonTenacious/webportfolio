@@ -1,5 +1,5 @@
 .portalGallery {
-    padding-left: calc(var(--padding-inline) + 181px);
+    padding-inline: var(--padding-inline);
     display: flex;
     flex-direction: column;
     gap: 71px;
@@ -27,6 +27,7 @@
 .portalGallery__filter {
     cursor: pointer;
     user-select: none;
+    text-wrap: nowrap;
 }
 
 .unselected {
@@ -45,6 +46,8 @@
 
 .portalGallery__content {
     display: flex;
+    justify-content: space-between;
+    margin: 0;
 }
 
 .portalGallery__textSide {
@@ -56,6 +59,8 @@
 
 .portalGallery__tags {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     gap: 24px;
 }
 
@@ -71,18 +76,26 @@
     width: auto;
     display: flex;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .portalGallery__frameWrapper {
     position: relative;
     display: inline-block;
-    width: 670px;
+    width: 536px;
     aspect-ratio: 3 / 4;
 }
 
 .portalGallery__image {
     width: 100%;
     height: 100%;
+}
+
+.portalGallery__arrowWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 .portalGallery__arrow {

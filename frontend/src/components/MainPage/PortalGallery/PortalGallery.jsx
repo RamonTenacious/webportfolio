@@ -37,9 +37,9 @@ export const PortalGallery = () => {
                         </h4>
                         <p>{data.paragraph}</p>
                         <section className='portalGallery__tags'>
-                        {data.tags?.map((tag, tagIndex) => (
-                            <h5 key={tagIndex} className='portalGallery__tag'>{tag}</h5>
-                        ))}
+                            {data.tags?.map((tag, tagIndex) => (
+                                <h5 key={tagIndex} className='portalGallery__tag'>{tag}</h5>
+                            ))}
                         </section>
                     </div>
                     ))
