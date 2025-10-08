@@ -5,8 +5,6 @@ import { useState } from 'react';
 
 
 export const PortalGallery = () => {
-    console.log(PORTAL_GALLERY_OPTIONS[0].content)
-
     const [selectedFilter, setSelectedFilter] = useState(0);
 
     const handleFilterOnClick = (id) => {

@@ -12,20 +12,24 @@ export const useMostVisibleComponent = (componentArray, options) => {
 
         if (filteredSections.length === 0) return;
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visibleEntry = entries
-                    .filter(entry => entry.isIntersecting)
-                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        const observer = new IntersectionObserver(entries => {
+        let maxVisible = null;
+        let maxWeight = 0;
 
-                if (visibleEntry) {
-                    setActiveSection(visibleEntry.target.id);
-                }
-            },
-            {
-                threshold: Array.from({ length: 101 }, (_, i) => i / 100)
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            const elementCenter = entry.boundingClientRect.top + entry.boundingClientRect.height / 2;
+            const distanceFromCenter = Math.abs(window.innerHeight / 2 - elementCenter);
+            const weight = entry.intersectionRatio * (1 - distanceFromCenter / (window.innerHeight / 2));
+            if (weight > maxWeight) {
+                maxWeight = weight;
+                maxVisible = entry.target.id;
             }
-        );
+            }
+        });
+
+        if (maxVisible) setActiveSection(maxVisible);
+        }, { threshold: Array.from({ length: 101 }, (_, i) => i / 100) });
 
         filteredSections.forEach(section => observer.observe(section));
 
