@@ -30,27 +30,29 @@ export const PortalGallery = () => {
             <section className='portalGallery__content'>
                 {
                     PORTAL_GALLERY_OPTIONS[selectedFilter].content.map((data, index) => (
-                    <div className='portalGallery__textSide' key={index}>
-                        <h1>{data.title}</h1>
-                        <h4>
-                        {data.started} - {data.stillPresent ? 'Present' : data.finished} {data.website}
-                        </h4>
-                        <p>{data.paragraph}</p>
-                        <section className='portalGallery__tags'>
-                            {data.tags?.map((tag, tagIndex) => (
-                                <h5 key={tagIndex} className='portalGallery__tag'>{tag}</h5>
-                            ))}
-                        </section>
-                    </div>
+                    <>
+                        <div className='portalGallery__textSide' key={index}>
+                            <h1>{data.title}</h1>
+                            <h4>
+                            {data.started} - {data.stillPresent ? 'Present' : data.finished} {data.website}
+                            </h4>
+                            <p>{data.paragraph}</p>
+                            <section className='portalGallery__tags'>
+                                {data.tags?.map((tag, tagIndex) => (
+                                    <h5 key={tagIndex} className='portalGallery__tag'>{tag}</h5>
+                                ))}
+                            </section>
+                        </div>
+                        <figure className='portalGallery__imageSide'>
+                            <img src={arrow} alt='arrow left' className='portalGallery__arrow left'/>
+                            <div className='portalGallery__frameWrapper'>
+                                <img className='portalGallery__image' src={data.image} alt='Project Image' />
+                            </div>
+                            <img src={arrow} alt='arrow right' className='portalGallery__arrow right'/>
+                        </figure>
+                    </>
                     ))
                 }
-                <figure className='portalGallery__imageSide'>
-                    <img src={arrow} alt='arrow left' className='portalGallery__arrow left'/>
-                    <div className='portalGallery__frameWrapper'>
-                        <img className='portalGallery__image' src={quasarImg} alt='Project Image' />
-                    </div>
-                    <img src={arrow} alt='arrow right' className='portalGallery__arrow right'/>
-                </figure>
             </section>
         </section>
     )

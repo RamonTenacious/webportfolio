@@ -105,3 +105,28 @@
 .right {
     transform: rotateZ(180deg);
 }
+
+@media screen and (max-width: 1024px) {
+    .portalGallery {
+        text-align: center;
+    }
+
+    .portalGallery__content {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portalGallery__frameWrapper {
+        width: 320px;
+    }
+
+    .portalGallery__header {
+        justify-content: center;
+    }
+
+    .portalGallery__tags{
+        justify-content: center;
+    }
+}
