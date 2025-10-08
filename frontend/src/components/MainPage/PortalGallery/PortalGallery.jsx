@@ -1,6 +1,5 @@
 import './PortalGallery.css';
 import arrow from '../../../assets/images/icons/arrow.png';
-import quasarImg from '../../../assets/images/portalGallery/Quasar.png';
 import { PORTAL_GALLERY_OPTIONS } from '../../../constants/portalGalleryOptions';
 import { useState } from 'react';
 
