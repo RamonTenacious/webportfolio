@@ -1,0 +1,11 @@
+.footer {
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer__figure {
+    display: flex;
+    gap: 0.5rem
+}
