@@ -26,11 +26,11 @@ export const PortalGallery = () => {
                     ))
                 }
             </header>
-            <section className='portalGallery__content'>
+            <section>
                 {
                     PORTAL_GALLERY_OPTIONS[selectedFilter].content.map((data, index) => (
-                    <>
-                        <div className='portalGallery__textSide' key={index}>
+                    <div className='portalGallery__content' key={index}>
+                        <div className='portalGallery__textSide'>
                             <h1>{data.title}</h1>
                             <h4>
                             {data.started} - {data.stillPresent ? 'Present' : data.finished} {data.website}
@@ -49,7 +49,7 @@ export const PortalGallery = () => {
                             </div>
                             <img src={arrow} alt='arrow right' className='portalGallery__arrow right'/>
                         </figure>
-                    </>
+                    </div>
                     ))
                 }
             </section>
