@@ -70,6 +70,7 @@
     padding-inline: 21px;
     padding-block: 3px;
     border-radius: 10px;
+    user-select: none;
 }
 
 .portalGallery__imageSide {
@@ -128,5 +129,12 @@
 
     .portalGallery__tags{
         justify-content: center;
+    }
+
+    .portalGallery__textSide {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
     }
 }
