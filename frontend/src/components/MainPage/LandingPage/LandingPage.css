@@ -34,6 +34,8 @@
 }
 
 .landingPage__skullImg {
+    opacity: 0;
+    transform: translateY(-40px);
     width: 50vw;
     aspect-ratio: auto;
     max-width: 1024px;
@@ -42,6 +44,14 @@
     top: -45vh;
     right: 0px;
     z-index: 1;
+    animation: driftIn 1.25s ease forwards;
+}
+
+@keyframes driftIn {
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 @media screen and (max-width: 1024px) {

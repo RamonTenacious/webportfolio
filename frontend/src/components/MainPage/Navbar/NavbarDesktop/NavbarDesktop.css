@@ -15,6 +15,11 @@
 
 .navbar__a-unselected {
     color: var(--unselected-text-color);
+    transition: 0.2s ease-in-out;
+}
+
+.navbar__a-unselected:hover {
+    color: var(--primary-color);
 }
 
 .navbar__dot {

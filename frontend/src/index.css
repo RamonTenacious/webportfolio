@@ -71,17 +71,17 @@ h4 {
 }
 
 h5 {
-    font-size: clamp(16px, 2vw, 24px);
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 400;
 }
 
 h6 {
-    font-size: clamp(14px, 1.75vw, 20px);
+    font-size: clamp(16px, 1.75vw, 20px);
     font-weight: 400;
 }
 
 p {
-    font-size: clamp(14px, 2vw, 24px);
+    font-size: clamp(18px, 2vw, 24px);
 }
 
 @media screen and (max-width: 380px) {
