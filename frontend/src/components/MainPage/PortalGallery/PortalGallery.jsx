@@ -24,30 +24,28 @@ export const PortalGallery = () => {
                     ))
                 }
             </header>
-            <section>
+            <section className='portalGallery__wrap'>
                 {
                     PORTAL_GALLERY_OPTIONS[selectedFilter].content.map((data, index) => (
-                    <div className='portalGallery__content' key={index}>
-                        <div className='portalGallery__textSide'>
-                            <h1>{data.title}</h1>
-                            <h4>
-                            {data.started} - {data.stillPresent ? 'Present' : data.finished} {data.website}
-                            </h4>
-                            <p>{data.paragraph}</p>
-                            <section className='portalGallery__tags'>
-                                {data.tags?.map((tag, tagIndex) => (
-                                    <h5 key={tagIndex} className='portalGallery__tag'>{tag}</h5>
-                                ))}
-                            </section>
-                        </div>
-                        <figure className='portalGallery__imageSide'>
-                            <img src={arrow} alt='arrow left' className='portalGallery__arrow left'/>
-                            <div className='portalGallery__frameWrapper'>
-                                <img className='portalGallery__image' src={data.image} alt='Project Image' />
+                        <div className='portalGallery__content' key={index}>
+                            <div className='portalGallery__textSide'>
+                                <h1>{data.title}</h1>
+                                <h4>
+                                {data.started} - {data.stillPresent ? 'Present' : data.finished} {data.website}
+                                </h4>
+                                <p>{data.paragraph}</p>
+                                <section className='portalGallery__tags'>
+                                    {data.tags?.map((tag, tagIndex) => (
+                                        <h5 key={tagIndex} className='portalGallery__tag'>{tag}</h5>
+                                    ))}
+                                </section>
                             </div>
-                            <img src={arrow} alt='arrow right' className='portalGallery__arrow right'/>
-                        </figure>
-                    </div>
+                            <figure className='portalGallery__imageSide'>
+                                <div className='portalGallery__frameWrapper'>
+                                    <img className='portalGallery__image' src={data.image} alt='Project Image' />
+                                </div>
+                            </figure>
+                        </div>
                     ))
                 }
             </section>
