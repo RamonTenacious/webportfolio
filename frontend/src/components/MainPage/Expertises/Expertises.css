@@ -11,7 +11,7 @@
   box-sizing: border-box;
   margin-left: 181px;
   width: 120vw;
-  padding: 41px 0 98px 75px;
+  padding: 41px 0 42px 75px;
   border: 1px solid white;
   border-right: none;
   border-radius: 20px 0 0 20px;
@@ -59,6 +59,22 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.expertises__iconWrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.expertises__icon {
+  width: clamp(24px, 7vw, 48px);
+  height: clamp(24px, 7vw, 48px);
+  transition: 0.2s;
+}
+
+.expertises__icon:hover {
+  color: var(--primary-color);
 }
 
 @media screen and (max-width: 1024px) {
