@@ -1,5 +1,6 @@
 .footer {
     margin-top: 30vh;
+    padding-inline: var(--padding-inline);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -7,7 +8,18 @@
 
 .footer__figure {
     display: flex;
-    gap: 0.5rem
+    margin-top: 0.25rem;
+    gap: 1rem
+}
+
+.footer__icon {
+    width: 32px;
+    height: 32px;
+    transition: 0.2s linear;
+}
+
+.footer__icon:hover {
+    color: var(--primary-color);
 }
 
 @media screen and (max-width: 1024px) {
