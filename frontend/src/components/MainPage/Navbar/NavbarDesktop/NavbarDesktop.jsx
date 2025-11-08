@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { NAVBAR_OPTIONS } from '../../../../constants/navbarOptions';
-//import { useMostVisibleComponent } from '../../../../hooks/useMostVisibleComponent';
 import { useScrolledDown } from '../../../../hooks/useScrolledDown';
 import './NavbarDesktop.css';
 

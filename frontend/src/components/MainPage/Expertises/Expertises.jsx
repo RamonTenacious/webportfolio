@@ -3,7 +3,7 @@ import './Expertises.css'
 
 export const Expertises = () => {
     return (
-        <section id='expertises' className='expertises__wrapper'>
+        <section id='expertises' className='expertises__wrapper appearAnimation'>
             <section className='expertises'>
                 <div className='expertises__inner'>
                     <header className='expertises__header'>

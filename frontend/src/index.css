@@ -84,6 +84,21 @@ p {
     font-size: clamp(18px, 2vw, 24px);
 }
 
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.appearAnimation {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+
 @media screen and (max-width: 380px) {
     :root {
         --font-spacing: 0px;

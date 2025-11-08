@@ -20,7 +20,7 @@ export const Footer = () => {
     ]
 
     return (
-        <section className='footer'>
+        <section className='footer' id='contact'>
             <h6>© {currentYear} Tenacious. All rights reserved.</h6>
             <h6>ramontenacious@gmail.com</h6>
             <figure className='footer__figure'>
