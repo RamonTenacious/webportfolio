@@ -10,7 +10,7 @@ export const PORTAL_GALLERY_OPTIONS = [
                 finished: 0,
                 stillPresent: true,
                 website: "",
-                paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nulla metus, tincidunt vitae risus id, rutrum posuere nisl. Nam mollis cursus massa, vitae rhoncus neque aliquam a. Ut finibus massa nisi, sed sollicitudin elit elementum ut.",
+                paragraph: "Managed full-stack web projects from design to AWS deployment: Django backend on EC2, static frontend with React/Vite on S3, LLM API endpoints, image/video storage, user auth, and GeoJSON handling.",
                 tags: [
                     "Frontend",
                     "Backend",
