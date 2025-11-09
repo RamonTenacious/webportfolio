@@ -6,7 +6,7 @@ import { Index } from './routes/Index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/tenacious-portifolio">
       <Index />
     </BrowserRouter>
   </StrictMode>,

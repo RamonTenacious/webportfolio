@@ -8,23 +8,16 @@ export const Index = () => {
     const isMobile = useIsMobile();
 
     return (
-        <deviceContext.Provider value={{isMobile: isMobile}}>
+        <deviceContext.Provider value={{ isMobile }}>
             <Routes>
-                <Route>
-                    {publicRoutes.map((route, idx) => (
-                        <Route
-                            path={route.path}
-                            element = {
-                                <React.Fragment>
-                                    {route.component}
-                                </React.Fragment>
-                            }
-                            key={idx}
-                            exact={true}
-                        />
-                    ))}
-                </Route>
+                {publicRoutes.map((route, idx) => (
+                    <Route
+                        key={idx}
+                        path={route.path}
+                        element={route.component}
+                    />
+                ))}
             </Routes>
         </deviceContext.Provider>
-    )
-}
+    );
+};
