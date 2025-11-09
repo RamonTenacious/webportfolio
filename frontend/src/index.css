@@ -51,12 +51,12 @@ ul {
 }
 
 h1 {
-    font-size: clamp(96px, 7vw, 128px);
+    font-size: clamp(64px, 7vw, 128px);
     font-weight: 400;
 }
 
 h2 {
-    font-size: clamp(48px, 5vw, 96px);
+    font-size: clamp(48px, 5vw, 64px);
     font-weight: 400;
 }
 
